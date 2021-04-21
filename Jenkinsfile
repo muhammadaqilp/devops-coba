@@ -19,8 +19,7 @@ node {
          * For this example, we're using a Volkswagen-type approach ;-) */
 
         app.inside {
-            sh 'run test'
-            sh 'echo "Tests passed"'
+            sh 'make test'
         }
     }
 
