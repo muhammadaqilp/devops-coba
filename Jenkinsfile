@@ -12,17 +12,14 @@ node {
          * docker build on the command line */
 
         app = docker.build("muhammadaqilp/edureka")
-        app.inside{
-            sh 'echo "Test passed"'
-        }
     }
 
     stage('Test image') {
         /* Ideally, we would run a test framework against our image.
          * For this example, we're using a Volkswagen-type approach ;-) */
 
-        app.inside {
-            sh 'make test'
+        app.inside{
+            sh 'echo "Test passed"'
         }
     }
 
