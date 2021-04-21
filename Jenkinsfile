@@ -14,15 +14,15 @@ node {
         app = docker.build("muhammadaqilp/edureka")
     }
 
-    stage('Test image') {
-        /* Ideally, we would run a test framework against our image.
-         * For this example, we're using a Volkswagen-type approach ;-) */
+    // stage('Test image') {
+    //     /* Ideally, we would run a test framework against our image.
+    //      * For this example, we're using a Volkswagen-type approach ;-) */
 
-        def test = app
-        test.inside {
-            sh 'make test'
-        }
-    }
+    //     def test = app
+    //     test.inside {
+    //         sh 'make test'
+    //     }
+    // }
 
     stage('Push image') {
         /* Finally, we'll push the image with two tags:
